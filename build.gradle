@@ -3,12 +3,21 @@ apply plugin: 'eclipse'
 
 sourceCompatibility = 1.7
 version = '1.0'
-jar {
-    manifest {
+jar
+{
+    manifest
+    {
         attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
     }
 }
-
-repositories {
+repositories
+{
     mavenCentral()
+}
+
+dependencies
+{
+    compile 'org.apache.wicket:wicket-core:6.13.0'
+    
+    testCompile 'junit:junit:[4.,)'
 }
