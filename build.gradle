@@ -1,23 +1,29 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
 
 sourceCompatibility = 1.7
-version = '1.0'
-jar
-{
-    manifest
-    {
-        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
-    }
-}
+version = '0.1-SNAPSHOT'
+group = 'org.nvoy'
+
+
 repositories
 {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies
 {
     compile 'org.apache.wicket:wicket-core:6.13.0'
+    compile 'com.google.code.findbugs:jsr305:2.0.3'
+    compile 'javax.validation:validation-api:1.0.0.GA'
     
-    testCompile 'junit:junit:[4.,)'
+    testCompile 'org.powermock:powermock-mockito-release-full:1.5.4'
+    testCompile 'javax.servlet:servlet-api:2.5'
+}
+
+test
+{
+    testLogging.showStandardStreams = true
 }
