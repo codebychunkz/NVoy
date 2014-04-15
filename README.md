@@ -1,4 +1,4 @@
-# NVoy - Component event dispatcher for Apache wicket
+### NVoy - Component event dispatcher for Apache wicket
 
 Simple alternative to handle component events in Wicket without having to rely on wickets default dispatcher.
 
